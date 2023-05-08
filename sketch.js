@@ -88,22 +88,22 @@ function draw() {
   line(40, 40, 197, 280);*/
   addBezier();
   for(let i = 0; i <= curves.length-1; i++){
-
+  
     for(let j = 0; j<=curves[i].points.length-1; j++){
       stroke(curves[i].color[0]-30, curves[i].color[1]-30, curves[i].color[2]-30);
       strokeWeight(20);
-      point(curves[i].points[j].x, curves[i].points[j].y);
+      if(!checkDot.checked()) point(curves[i].points[j].x, curves[i].points[j].y);
     }
     for(let j = 0; j<=curves[i].points.length-2; j++){
 
       stroke(curves[i].color[0], curves[i].color[1], curves[i].color[2], 100);
       strokeWeight(5);
-      line(curves[i].points[j].x, curves[i].points[j].y, curves[i].points[j+1].x, curves[i].points[j+1].y);
+      if(!checkPoligon.checked()) line(curves[i].points[j].x, curves[i].points[j].y, curves[i].points[j+1].x, curves[i].points[j+1].y);
     }
     stroke(curves[i].color[0]-30, curves[i].color[1]-30, curves[i].color[2]-30);
     strokeWeight(5);
     for(let j = 0; j<=curves[i].bezier.length-2; j++){
-      line(curves[i].bezier[j].x, curves[i].bezier[j].y, curves[i].bezier[j+1].x, curves[i].bezier[j+1].y);
+      if(!checkCurves.checked()) line(curves[i].bezier[j].x, curves[i].bezier[j].y, curves[i].bezier[j+1].x, curves[i].bezier[j+1].y);
     }
 
   }        
