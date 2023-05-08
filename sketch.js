@@ -102,7 +102,7 @@ function draw() {
     }
     stroke(curves[i].color[0]-30, curves[i].color[1]-30, curves[i].color[2]-30);
     strokeWeight(5);
-    for(let j = 0; j<=curves[i].points.length-2; j++){
+    for(let j = 0; j<=curves[i].bezier.length-2; j++){
       line(curves[i].bezier[j].x, curves[i].bezier[j].y, curves[i].bezier[j+1].x, curves[i].bezier[j+1].y);
     }
 
