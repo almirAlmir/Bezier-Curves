@@ -30,15 +30,37 @@ function setup() {
   ];
 
 
+  let div = document.createElement("DIV");
+  let divCheck = document.createElement("DIV");
+  let container = document.createElement("DIV");
   
+  document.body.appendChild(div);
+  document.body.appendChild(divCheck);
+  document.body.appendChild(container);
+
+  div.id = "buttons";
+  divCheck.id = "checks";
+  container.id = "container";
+  container.appendChild(divCheck)
+
   buttonAdd = createButton("ADD");
   buttonDel = createButton("DEL");
   buttonNEvaluations = createButton("Nº Eval"+ Evaluation[evalIndex]);
   buttonSelectcurve = createButton("Select");
-  checkDot = createCheckbox("hide Dots", false);
-  checkPoligon = createCheckbox("hide Poligons", false);
-  checkCurves = createCheckbox("hide Curves", false);
-  
+
+  buttonAdd.parent('buttons');
+  buttonDel.parent('buttons');
+  buttonNEvaluations.parent('buttons');
+  buttonSelectcurve.parent('buttons');
+
+  checkDot = createCheckbox("Hide Dots", false);
+  checkPoligon = createCheckbox("Hide Poligons", false);
+  checkCurves = createCheckbox("Hide Curves", false);
+
+  checkDot.parent('checks');
+  checkPoligon.parent('checks');
+  checkCurves.parent('checks');
+
   selectBox = createSelect();
   selectBox.option(1);
   selectBox.option(2);
@@ -50,6 +72,7 @@ function setup() {
   selectBox.option(8);
   selectBox.option(9);
   selectBox.option(10);
+  selectBox.parent('container')
   //Actions
   buttonAdd.mouseClicked(() => {
     CurveAdd();

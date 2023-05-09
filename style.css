@@ -1,0 +1,130 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #1b1b1b;
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    flex-wrap: wrap;
+}
+
+#buttons {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin-left: 1%;
+}
+
+#checks {
+    display: flex;
+    flex-direction: row;
+    margin-left: 13%;
+    margin-bottom: 1%;
+}
+
+#container {
+    margin-top: 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 11%;
+    padding-right: 11%;
+    padding-bottom: 11%;
+}
+
+label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+input {
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 2px;
+}
+
+input:hover {
+    background-color: #4F95DA;
+}
+
+input:checked {
+    background-color: #4F95DA;
+}
+
+span {
+    color: #eee;
+}
+
+button {
+    width: 180px;
+    height: 60px;
+    color: #fff;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid #91C9FF;
+    outline: none;
+}
+
+svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    fill: none;
+    stroke: #fff;
+    stroke-dasharray: 150 480;
+    stroke-dashoffset: 150;
+    transition: 1s ease-in-out;
+}
+
+button:hover {
+    transition: 1s ease-in-out;
+    background: #4F95DA;
+}
+
+button:active {
+    background-color: #4F95DA;
+}
+
+button:hover svg {
+    stroke-dashoffset: -480;
+}
+
+button span {
+    color: white;
+    font-size: 18px;
+    font-weight: 100;
+}
+
+select {
+    width: 15%;
+    height: 50px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 1%;
+    padding-left: 5px;
+    padding: 10px;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    color: #555;
+    background-color: rgb(255, 255, 255);
+    background-image: none;
+    border: 1px solid rgb(41, 18, 18);
+}
+
+select>option {
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    color: #555;
+    background-color: rgb(247, 247, 247);
+    background-image: none;
+    font-size: 18px;
+    height: 50px;
+    padding: 15px;
+    border: 1px solid rgb(41, 18, 18);
+}
