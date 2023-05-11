@@ -2,7 +2,9 @@ body {
     padding: 0;
     margin: 0;
     background-color: #1b1b1b;
-    font-family: 'Open Sans', sans-serif;
+
+    font-family: Roboto, "Open Sans", sans-serif;
+
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -63,6 +65,10 @@ span {
 
 button {
     width: 180px;
+<<<<<<< HEAD
+=======
+    margin:5px;
+>>>>>>> modified
     height: 60px;
     color: #fff;
     cursor: pointer;
@@ -83,12 +89,20 @@ svg {
 }
 
 button:hover {
+<<<<<<< HEAD
     transition: 1s ease-in-out;
+=======
+    transition: 0.1s ease-in-out;
+>>>>>>> modified
     background: #4F95DA;
 }
 
 button:active {
+<<<<<<< HEAD
     background-color: #4F95DA;
+=======
+    background-color: #172e54;
+>>>>>>> modified
 }
 
 button:hover svg {
